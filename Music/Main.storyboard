@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="92n-Kp-BOY"/>
+                        <viewControllerLayoutGuide type="bottom" id="ktL-46-kxc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xk8-kX-xCY">
+                                <rect key="frame" x="0.0" y="64" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78A-gX-tcc">
+                                <rect key="frame" x="0.0" y="472" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem width="45" style="plain" systemItem="fixedSpace" id="f6Q-Dq-a2E"/>
+                                    <barButtonItem systemItem="rewind" id="lCZ-ri-Q9D">
+                                        <inset key="imageInsets" minX="2" minY="-5" maxX="1" maxY="1"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="rewindPressed:" destination="vXZ-lx-hvc" id="TIE-a7-9n8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="55" style="plain" systemItem="fixedSpace" id="iHN-eG-QWd">
+                                        <inset key="imageInsets" minX="7" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="play" id="co6-tm-cr4">
+                                        <inset key="imageInsets" minX="-3" minY="-4" maxX="-6" maxY="1"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="playPausePressed:" destination="vXZ-lx-hvc" id="bDX-xC-Dqa"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="58" style="plain" systemItem="fixedSpace" id="9of-Qm-99U"/>
+                                    <barButtonItem systemItem="fastForward" id="hVC-y7-Exi">
+                                        <inset key="imageInsets" minX="2" minY="-5" maxX="-1" maxY="-1"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="fastForwardPressed:" destination="vXZ-lx-hvc" id="KuG-u7-QPy"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vZo-Po-vSB">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <navigationItem id="tb7-K6-Kba">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="EtZ-Cq-b2N">
+                                            <color key="tintColor" red="0.98431378602981567" green="0.24313727021217346" blue="0.41176474094390869" alpha="1" colorSpace="deviceRGB"/>
+                                            <connections>
+                                                <action selector="addPressed:" destination="vXZ-lx-hvc" id="z8B-RE-4yh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OhT-N8-pRQ">
+                                <rect key="frame" x="0.0" y="418" width="320" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ipw-Hd-Vgh">
+                                <rect key="frame" x="0.0" y="442" width="328" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwd-b7-Wqq">
+                                <rect key="frame" x="139" y="33" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="artist" destination="Ipw-Hd-Vgh" id="cNz-cY-Fni"/>
+                        <outlet property="imageView" destination="Xk8-kX-xCY" id="CCZ-jR-IWa"/>
+                        <outlet property="play" destination="co6-tm-cr4" id="yDH-8v-BIm"/>
+                        <outlet property="song" destination="OhT-N8-pRQ" id="8KJ-0x-iS8"/>
+                        <outlet property="status" destination="rwd-b7-Wqq" id="dMF-Ve-7g1"/>
+                        <outlet property="toolbar" destination="78A-gX-tcc" id="680-nc-MBE"/>
+                        <outlet property="view" destination="kh9-bI-dsS" id="7wZ-pT-AhM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="237" y="130"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

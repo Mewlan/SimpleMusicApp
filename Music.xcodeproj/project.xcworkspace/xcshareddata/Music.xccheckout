@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FE786C36-EEF1-4E27-9F74-F449CAEA2ED3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Music</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>417E1C41-41B6-455A-9F8D-2A40367F2797</key>
+		<string>https://github.com/Mewlan/SimpleMusicApp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Music.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>417E1C41-41B6-455A-9F8D-2A40367F2797</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Mewlan/SimpleMusicApp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>417E1C41-41B6-455A-9F8D-2A40367F2797</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>417E1C41-41B6-455A-9F8D-2A40367F2797</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SimpleMusicApp</string>
+		</dict>
+	</array>
+</dict>
+</plist>

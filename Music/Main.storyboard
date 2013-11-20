@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
@@ -26,7 +27,6 @@
                                 <items>
                                     <barButtonItem width="45" style="plain" systemItem="fixedSpace" id="f6Q-Dq-a2E"/>
                                     <barButtonItem systemItem="rewind" id="lCZ-ri-Q9D">
-                                        <inset key="imageInsets" minX="2" minY="-5" maxX="1" maxY="1"/>
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="rewindPressed:" destination="vXZ-lx-hvc" id="TIE-a7-9n8"/>
@@ -36,7 +36,6 @@
                                         <inset key="imageInsets" minX="7" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </barButtonItem>
                                     <barButtonItem systemItem="play" id="co6-tm-cr4">
-                                        <inset key="imageInsets" minX="-3" minY="-4" maxX="-6" maxY="1"/>
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="playPausePressed:" destination="vXZ-lx-hvc" id="bDX-xC-Dqa"/>
@@ -44,7 +43,6 @@
                                     </barButtonItem>
                                     <barButtonItem width="58" style="plain" systemItem="fixedSpace" id="9of-Qm-99U"/>
                                     <barButtonItem systemItem="fastForward" id="hVC-y7-Exi">
-                                        <inset key="imageInsets" minX="2" minY="-5" maxX="-1" maxY="-1"/>
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="fastForwardPressed:" destination="vXZ-lx-hvc" id="KuG-u7-QPy"/>
@@ -80,12 +78,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwd-b7-Wqq">
-                                <rect key="frame" x="139" y="33" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -94,7 +86,6 @@
                         <outlet property="imageView" destination="Xk8-kX-xCY" id="CCZ-jR-IWa"/>
                         <outlet property="play" destination="co6-tm-cr4" id="yDH-8v-BIm"/>
                         <outlet property="song" destination="OhT-N8-pRQ" id="8KJ-0x-iS8"/>
-                        <outlet property="status" destination="rwd-b7-Wqq" id="dMF-Ve-7g1"/>
                         <outlet property="toolbar" destination="78A-gX-tcc" id="680-nc-MBE"/>
                         <outlet property="view" destination="kh9-bI-dsS" id="7wZ-pT-AhM"/>
                     </connections>

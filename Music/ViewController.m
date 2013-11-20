@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
+
+#define IS_IPHONE_5 ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 568.0)
 
 @interface ViewController ()
 
@@ -15,9 +18,24 @@
 @implementation ViewController
 
 - (void)viewDidLoad
-{NSLog(@"%s", __func__);
+{
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    if (!IS_IPHONE_5) {
+        
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:NSLocalizedString(@"This is 3.5 inch Screen iPhone(iPod)", @"This is a 3.5 inch screen")
+                              message:NSLocalizedString(@"This Demo currenly dose not support 3.5 inch iPhone or iPod Touch.",
+                                                        @"This Demo currenly only support 4 inch display")
+                              delegate:self
+                              cancelButtonTitle:NSLocalizedString(@"Okay", @"Okay")
+                              otherButtonTitles:nil];
+        [alert show];
+        
+    }
+
+    
     self.pause = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPause target:self action:@selector(playPausePressed:)];
     [self.pause setStyle:UIBarButtonItemStyleBordered];
     self.player = [MPMusicPlayerController iPodMusicPlayer];
@@ -27,7 +45,18 @@
                                name:MPMusicPlayerControllerNowPlayingItemDidChangeNotification object:self.player];
 
     [self.player beginGeneratingPlaybackNotifications];
+    [self.player beginGeneratingPlaybackNotifications];
+    MPMusicPlaybackState playbackState = [self.player playbackState];
+    if (playbackState == MPMusicPlaybackStatePlaying) {
+        [self.pause setTintColor:[UIColor blackColor]];
+        NSMutableArray *items = [NSMutableArray arrayWithArray:[self.toolbar items]];
+        [items replaceObjectAtIndex:3 withObject:self.pause];
+        [self.toolbar setItems:items animated:NO];
+    }
+
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -91,7 +120,7 @@
 
 #pragma mark - Media Picker Delegate Methods
 
-- (void)mediaPicker:(MPMediaPickerController *)mediaPicker didPickMediaItems:(MPMediaItemCollection *)mediaItemCollection {NSLog(@"%s", __func__);
+- (void)mediaPicker:(MPMediaPickerController *)mediaPicker didPickMediaItems:(MPMediaItemCollection *)mediaItemCollection {
     [mediaPicker dismissViewControllerAnimated:YES completion:nil];
     
     if (self.collection == nil) {

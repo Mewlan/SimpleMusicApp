@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface ViewController : UIViewController <MPMediaPickerControllerDelegate>
+@interface ViewController : UIViewController <MPMediaPickerControllerDelegate,UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *song;
 @property (weak, nonatomic) IBOutlet UILabel *artist;
